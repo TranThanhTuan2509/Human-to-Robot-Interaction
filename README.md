@@ -1,7 +1,7 @@
 # Human-to-Robot Interaction: Learning from Video Demonstration for Robot Imitation
 
 ## Prerequisites
-Create a conda env called handobj_new, install pytorch-1.12.1, cuda-11.3:
+Create a conda env called human2robot, install pytorch-1.12.1, cuda-11.3:
 ```
 conda create --name human2robot python=3.8
 conda activate human2robot
