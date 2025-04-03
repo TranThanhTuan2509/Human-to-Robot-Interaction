@@ -12,7 +12,7 @@ Then, clone the code
 git clone https://github.com/TranThanhTuan2509/Human-to-Robot-Interaction.git
 
 ```
-Install all the python dependencies using pip::
+Install all the python dependencies using pip:
 ```
 pip install -r requirements.txt
 ```
@@ -21,7 +21,7 @@ Compile the cuda dependencies using following simple commands:
 cd lib
 python setup.py build develop
 ```
-make sure your `CUDA driver` version is matched with you `nvcc` version if you want to run our model on GPU
+make sure your `CUDA driver` version is matched with you `nvcc` version if you want to run the model on GPU
 
 ## Performance (AP)
 ### Video understanding
