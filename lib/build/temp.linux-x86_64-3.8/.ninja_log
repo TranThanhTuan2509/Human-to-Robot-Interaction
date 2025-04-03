@@ -1,0 +1,20 @@
+# ninja log v5
+0	23172	1741015998551739580	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/ROIAlign_cpu.o	f714f10b3825eb59
+0	25926	1741016001315850930	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/nms_cpu.o	5a5babdad91664a2
+11	26831	1741016002152808751	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/vision.o	13838ee81d8d6a73
+5	45756	1741016021136232109	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cuda/nms.o	6eb23515c8f2e180
+53	17289	1741016877727296722	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/ROIAlign_cpu.o	f714f10b3825eb59
+54	17360	1741016877797917800	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/nms_cpu.o	5a5babdad91664a2
+56	19439	1741016879875037065	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/vision.o	13838ee81d8d6a73
+54	16325	1741019166153503143	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/ROIAlign_cpu.o	dc665207dd5ff5ac
+54	16771	1741019166596939850	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/nms_cpu.o	a5db2a9059f64f71
+55	18833	1741019168654225533	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/vision.o	51ad0e8ba96eea2a
+61	15709	1741019185028133629	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/ROIAlign_cpu.o	87aecaa046c77453
+61	16024	1741019185343142824	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/cpu/nms_cpu.o	6107e311ab04ca7d
+62	18095	1741019187410313429	/home/u9564043/train_rl/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/u9564043/train_rl/hand_object_detector/lib/model/csrc/vision.o	a07315b852acd2e6
+3	11403	1741857704213022696	/home/tuan/Documents/Code/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/tuan/Documents/Code/hand_object_detector/lib/model/csrc/cpu/ROIAlign_cpu.o	a2aa1e869968a6b7
+4	11737	1741857704553022709	/home/tuan/Documents/Code/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/tuan/Documents/Code/hand_object_detector/lib/model/csrc/cpu/nms_cpu.o	ee696924389bf1
+4	14832	1741857707645022826	/home/tuan/Documents/Code/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/tuan/Documents/Code/hand_object_detector/lib/model/csrc/vision.o	6e88f4177b4f61c8
+35	12186	1741857720301023303	/home/tuan/Documents/Code/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/tuan/Documents/Code/hand_object_detector/lib/model/csrc/cpu/ROIAlign_cpu.o	781b6d94940dea31
+35	12578	1741857720693023318	/home/tuan/Documents/Code/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/tuan/Documents/Code/hand_object_detector/lib/model/csrc/cpu/nms_cpu.o	475b125ec5cba303
+35	15726	1741857723837023437	/home/tuan/Documents/Code/hand_object_detector/lib/build/temp.linux-x86_64-3.8/home/tuan/Documents/Code/hand_object_detector/lib/model/csrc/vision.o	6a4299efb6df7760
