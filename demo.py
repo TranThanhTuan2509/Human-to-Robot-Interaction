@@ -56,10 +56,10 @@ def parse_args():
   """
   Parse input arguments
   """
-  parser = argparse.ArgumentParser(description='Video Understanding')
+  parser = argparse.ArgumentParser(description='Action recognition and hand object detection')
   parser.add_argument('--video', default=' mmaction2/demo'
                                          '/practical_video/picking_reg_cube.mp4', help='video file/url')
-  parser.add_argument('--reduced_frame_video', default=f'{ROOT_PATH}/outputs/reduced_frame_video/reduced_frame_video.mp4', help='reduced frame video')
+  parser.add_argument('--reduced_frame_video', default=f'{ROOT_PATH}/reduced_frame_video/reduced_frame_video.mp4', help='reduced frame video')
   parser.add_argument(
       '--config',
       default=(f'{ROOT_PATH}/mmaction2/pretrained_file_and_checkpoint/'
@@ -70,6 +70,10 @@ def parse_args():
       default=(f'{ROOT_PATH}/mmaction2/pretrained_file_and_checkpoint/'
                'tsm_imagenet-pretrained-r50_8xb16-1x1x16-50e_sthv2-rgb_20230317-ec6696ad.pth'),
       help='action recognition model checkpoint file/url')
+  # parser.add_argument(
+  #     '--robotu_checkpoint',
+  #     default=(f'{ROOT_PATH}/multitask/checkpoint/checkpoint_40000/content/checkpoint_40000'),
+  #     help='robot understanding module checkpoint file/url')
   parser.add_argument(
       '--label_map',
       default=f'{ROOT_PATH}/mmaction2/label_map.txt',
@@ -92,23 +96,23 @@ def parse_args():
                       help='set config keys', default=None,
                       nargs=argparse.REMAINDER)
   parser.add_argument('--motion_saver', dest='motion_saver',
-                      help='directory to save the video description',
-                      default=f'{ROOT_PATH}/outputs/motion_saver')
+                      help='directory to save the motion description',
+                      default=f'{ROOT_PATH}/motion_saver')
   parser.add_argument('--load_dir', dest='load_dir',
                       help='directory to load models',
-                      default=f'{ROOT_PATH}/video_understanding_checkpoint')
+                      default=f'{ROOT_PATH}')
   parser.add_argument('--image_dir', dest='image_dir',
                       help='directory to load images for demo',
-                      default=f'{ROOT_PATH}/outputs/images')
+                      default=f'{ROOT_PATH}/images')
   parser.add_argument('--save_dir', dest='save_dir',
                       help='directory to save results',
-                      default=f'{ROOT_PATH}/outputs/output')
+                      default=f'{ROOT_PATH}/output')
   parser.add_argument('--cropped_pick_dir', dest='cropped_pick_dir',
                       help='directory to save cropped picked object',
-                      default=f'{ROOT_PATH}/outputs/cropped_pick')
+                      default=f'{ROOT_PATH}/cropped_pick')
   parser.add_argument('--cropped_place_dir', dest='cropped_place_dir',
                       help='directory to save cropped placed object',
-                      default=f'{ROOT_PATH}/outputs/cropped_place')
+                      default=f'{ROOT_PATH}/cropped_place')
   parser.add_argument('--cuda', dest='cuda', 
                       help='whether use CUDA',
                       action='store_true')
@@ -146,6 +150,9 @@ def parse_args():
                       type=float,
                       required=False)
   parser.add_argument("--image_size", "-s", type=int, default=224, help='fixed image size')
+  parser.add_argument("--checkpoint_path", "-m", type=str,
+                      default=f'{ROOT_PATH}/classification_branch/checkpoints/no_best.pt',
+                      help='classification checkpoint')
 
   args = parser.parse_args()
   return args
@@ -156,7 +163,7 @@ weight_decay = cfg.TRAIN.WEIGHT_DECAY
 # START RUNNING
 
 def main(args):
-    video_dir = "Dataset/Videos"
+    video_dir = "Dataset/Dataset"
     video_list = sorted(
        [f for f in os.listdir(video_dir) if f.endswith(".MOV") or f.endswith(".mp4")],
        key=lambda x: int(x.split(".")[0])
@@ -507,8 +514,6 @@ def main(args):
                 "Identify the main object in the image that is directly interacted with by a human hand. "
                 "Describe it using exactly two words: first its color, then its object type. "
                 "Format: 'the [color] [object]', e.g., 'the blue block'. "
-                "Only use objects from this allowed list: "
-                "ball, cup, block, book, pen, apple, toy, bottle, key, bowl. "
             )
             responses = [caption_image(image_path, prompt) for image_path in image_links[::-1]]
             # Save action result and object result
