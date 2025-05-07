@@ -32,7 +32,7 @@ Action recognition checkpoint to `/Human-to-Robot-Interaction/mmaction2/pretrain
 Hand detection checkpoint to `/Human-to-Robot-Interaction/video_understanding_checkpoint/res101_handobj_100K/pascal_voc`
 
 ### Robot Understanding (DRL)
-Download TransporterNet [checkpoint](https://drive.google.com/file/d/1AqyG59GCJM6Hdr2XNkDOw3ePpkVGGr_T/view?usp=sharing), and save it inside `checkpoint` folder
+Download TransporterNet [checkpoint](https://drive.google.com/file/d/1AqyG59GCJM6Hdr2XNkDOw3ePpkVGGr_T/view?usp=sharing), and save it inside `Reinforcement_learning/checkpoint` folder
 
 ## Testing
 ### Video understanding
