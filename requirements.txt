@@ -19,3 +19,5 @@ mmaction2==1.2.0
 mmcv-lite==2.1.0
 pandas
 pascal_voc_writer
+gym==0.25.1
+numpy==1.26.4
