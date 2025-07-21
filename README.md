@@ -31,8 +31,19 @@ Action recognition checkpoint to `/Human-to-Robot-Interaction/mmaction2/pretrain
 
 Hand detection checkpoint to `/Human-to-Robot-Interaction/video_understanding_checkpoint/res101_handobj_100K/pascal_voc`
 
-### Robot Understanding (DRL)
-Download TransporterNet [checkpoint](https://drive.google.com/file/d/1AqyG59GCJM6Hdr2XNkDOw3ePpkVGGr_T/view?usp=sharing), and save it inside `Reinforcement_learning/checkpoint` folder
+## Training
+### Robot Control (DRL)
+- The main RL folder is named "DRL", which contains the environment, reward functions, model definitions, and the training script.
+- To train the model, run:
+```
+python3 train_td3.py
+```
+#### Hyperparameter tuning
+- To training with a specific task, please change
+```
+env.unwrapped.action_type = [0: touch, 1: pick, 2: move, 3: place]
+```
+- All hyperparameters are defined in the argument parser `argparser` with detailed descriptions.
 
 ## Testing
 ### Video understanding
@@ -41,5 +52,3 @@ To evaluate the understanding performance, run:
 python3 demo.py --checkepoch=8 --checkpoint=132028 --video video_path
 ```
 Alternatively, you can put a set of videos inside `/Human-to-Robot-Interaction/Dataset/Videos`, and modify your video file names to numbers.
-
-### Robot Understanding (DRL)
